@@ -363,6 +363,51 @@ article {
 
   width: 780px;
 }
+.article-precontent {
+  margin: 0 0 18px;
+  span {
+    display: inline-block;
+
+    height: 20px;
+    margin: 0 12px 0 0;
+    padding: 6px 0;
+  }
+  .cats,
+  .tags {
+    a {
+      display: inline-block;
+
+      padding: 0 12px;
+
+      color: #fff;
+    }
+  }
+  .cats {
+    a {
+      background-color: #00aaad;
+    }
+  }
+  .tags {
+    a {
+      margin: 0 10px 0 0;
+
+      background-color: $orange;
+    }
+  }
+  .date {
+    font-size: 15px;
+
+    padding: 6px 0;
+
+    color: #565859;
+  }
+}
+.single-thumb {
+  display: block;
+
+  width: 100%;
+  margin: 0 0 16px;
+}
 .looper {
   @extend .clearfix;
 }
@@ -499,7 +544,7 @@ aside {
     }
   }
   .widget-cat-list {
-    margin: 0 0 50px;
+    margin: 0 0 40px;
     h6 {
       font-size: 20px;
 
@@ -523,7 +568,7 @@ aside {
   }
   .widget-cat-list-orange {
     h6 {
-      background-color: #f37121;
+      background-color: $orange;
     }
   }
   .widget-cat-list-blue {

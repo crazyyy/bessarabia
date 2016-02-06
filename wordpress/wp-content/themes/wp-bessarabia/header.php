@@ -38,9 +38,31 @@
         <?php } ?>
       </div><!-- /logo -->
 
+      <div class="zibrov">
+        <span></span>
+      </div><!-- /.zibrov -->
+
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
+        <ul class="headnav">
+          <li><a href="">Главная</a></li>
+          <li><a href="">рубрики</a></li>
+          <li><a href="">регионы</a></li>
+          <li><a href="">сообщить новость</a></li>
+        </ul><!-- headnav -->
+        <ul class="socialnav">
+          <li class="soc-ico-vk"><a href=""></a></li>
+          <li class="soc-ico-od"><a href=""></a></li>
+          <li class="soc-ico-fb"><a href=""></a></li>
+          <li class="soc-ico-tw"><a href=""></a></li>
+          <li class="soc-ico-gp"><a href=""></a></li>
+        </ul><!-- socialnav -->
       </nav><!-- /nav -->
+
+      <form method="get" class="header-search" name="searchform" action="<?php bloginfo('url'); ?>/">
+        <input type="text" value="" name="s" placeholder="Поиск" />
+        <input type="submit" name="Поиск" value=""/>
+      </form>
 
     </div><!-- /.inner -->
   </header><!-- /header -->

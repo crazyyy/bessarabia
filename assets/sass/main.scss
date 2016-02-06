@@ -333,6 +333,21 @@ section {
 article {
   @extend .clearfix;
 }
+.cat-title {
+  font-size: 23px;
+
+  float: left;
+
+  width: 100%;
+  margin: 0 0 12px;
+  margin-top: -30px;
+  padding: 0 260px 12px 0;
+
+  text-transform: uppercase;
+
+  color: #000;
+  border-bottom: 1px solid #000;
+}
 .single-title {
   font-size: 23px;
 
@@ -383,6 +398,8 @@ article {
     font-size: 23px;
 
     margin: 0 0 30px;
+
+    text-transform: uppercase;
 
     color: #040404;
   }
@@ -525,6 +542,23 @@ article {
     display: block;
 
     color: #565859;
+  }
+}
+.front-loop-cat {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+.pagination {
+  float: left;
+
+  width: 100%;
+
+  text-align: center;
+  span,
+  a {
+    display: inline-block;
+
+    margin: 0 5px;
   }
 }
 aside {

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <h1 class="ctitle"><?php _e( 'Page not found', 'wpeasy' ); ?></h1>
-    <h2><a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'wpeasy' ); ?></a></h2>
+    <h1 class="single-title inner-title"><?php _e( 'Page not found', 'wpeasy' ); ?></h1>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('article-right-sidebar'); ?>>
+      <h2><a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'wpeasy' ); ?></a></h2>
+    </article>
 
-  </article>
-<?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 <?php get_footer(); ?>

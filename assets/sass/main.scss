@@ -12,7 +12,15 @@
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_opensans';
 @import 'fonts/font_roboto';
+html,
+body {
+  min-width: $width;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 
+  animation: fadein 2s;
+}
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -90,26 +98,194 @@ picture {
 }
 
 header {
-  background-color: $light-gray;
+  position: relative;
+
+  height: 274px;
+  &:before {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 45px;
+
+    background-color: $blue;
+
+    @extend .dblock;
+  }
+  .inner {
+    height: 100%;
+  }
   .logo {
+    position: absolute;
+    top: 70px;
+    left: 0;
+
     display: block;
 
-    width: $width / 10;
+    width: 474px;
+    height: 107px;
     img {
       max-width: 100%;
     }
   }
+  .zibrov {
+    position: absolute;
+    top: 84px;
+    right: 0;
+
+    width: 468px;
+    height: 60px;
+    span {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: yellow;
+    }
+  }
 }
 nav {
-  ul {
-    @extend .justify-child;
+  position: absolute;
+  top: 190px;
+  right: 0;
+  left: 0;
+
+  height: 44px;
+  padding: 10px 0;
+
+  background-color: #565859;
+
+  @extend .clearfix;
+  .headnav {
+    float: left;
+
+    padding: 0;
+
     @extend .clearfix;
     li {
       display: inline-block;
+      float: left;
+
+      height: 22px;
+      margin: 0;
+      padding: 0;
+
+      border-right: 1px solid #fff;
+      a {
+        padding: 0 12px;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: #fff;
+        &:hover {
+          color: $blue;
+        }
+      }
+      &:last-child {
+        border-right: 0;
+      }
     }
   }
-  .headnav {
-    width: $width / 5;
+  .socialnav {
+    float: right;
+
+    width: 210px;
+    padding: 0 10px;
+
+    text-align: right;
+    li {
+      display: inline-block;
+
+      width: 26px;
+      height: 26px;
+      margin: 0 2px;
+      a {
+        display: block;
+
+        height: 100%;
+
+        opacity: .8;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &.soc-ico-vk {
+        a {
+          background-image: url(../img/ico/ico-vk.png);
+        }
+      }
+      &.soc-ico-od {
+        a {
+          background-image: url(../img/ico/ico-od.png);
+        }
+      }
+      &.soc-ico-fb {
+        a {
+          background-image: url(../img/ico/ico-fb.png);
+        }
+      }
+      &.soc-ico-tw {
+        a {
+          background-image: url(../img/ico/ico-tw.png);
+        }
+      }
+      &.soc-ico-gp {
+        a {
+          background-image: url(../img/ico/ico-gp.png);
+        }
+      }
+      &:hover {
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.header-search {
+  position: absolute;
+  z-index: 1;
+  top: 260px;
+  right: 0;
+
+  overflow: hidden;
+
+  width: 230px;
+  height: 30px;
+
+  border-radius: 3px;
+  input {
+    margin: 0;
+    padding: 5px;
+  }
+  input[type='text'] {
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+    background-color: $blue;
+  }
+  input[type='submit'] {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 30px;
+
+    cursor: pointer;
+
+    border: 0;
+    background-color: transparent;
+    background-image: url(../img/ico/ico-search.png);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -128,9 +304,47 @@ footer {
   height: $footer;
   margin: $footer_margin auto 0;
 
-  background-color: $light-gray;
+  background-color: $blue;
   .inner {
     height: $footer;
+  }
+  .footernav {
+    position: absolute;
+    top: 35px;
+    left: 0;
+
+    @extend .clearfix;
+    li {
+      display: inline-block;
+
+      padding: 0 10px;
+
+      border-right: 1px solid #fff;
+      a {
+        font-size: 18px;
+        line-height: .8;
+
+        margin: 0;
+
+        color: #fff;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+  .copyright {
+    font-size: 18px;
+
+    position: absolute;
+    top: 36px;
+    right: 0;
+
+    margin: 0;
+
+    text-align: right;
+
+    color: #fff;
   }
 }
 

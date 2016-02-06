@@ -54,7 +54,7 @@
       </nav><!-- /nav -->
 
       <form method="get" class="header-search" name="searchform" action="<?php bloginfo('url'); ?>/">
-        <input type="text" value="" name="s" placeholder="Поиск" />
+        <input type="text" name="s" value="Поиск" onfocus="clearThis(this)" />
         <input type="submit" name="Поиск" value=""/>
       </form>
 

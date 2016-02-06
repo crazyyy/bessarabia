@@ -17,3 +17,6 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+function clearThis(target){
+  $(target).val = "";
+}

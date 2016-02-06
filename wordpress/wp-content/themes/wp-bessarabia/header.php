@@ -44,12 +44,6 @@
 
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
-        <ul class="headnav">
-          <li><a href="">Главная</a></li>
-          <li><a href="">рубрики</a></li>
-          <li><a href="">регионы</a></li>
-          <li><a href="">сообщить новость</a></li>
-        </ul><!-- headnav -->
         <ul class="socialnav">
           <li class="soc-ico-vk"><a href=""></a></li>
           <li class="soc-ico-od"><a href=""></a></li>

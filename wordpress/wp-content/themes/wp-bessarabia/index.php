@@ -144,30 +144,3 @@
           </ul>
         </div><!-- widget -->
       </aside><!-- /sidebar -->
-
-    </div><!-- /.inner -->
-  </section><!-- /section -->
-</div><!-- /wrapper -->
-
-<footer role="contentinfo">
-  <div class="inner">
-
-    <ul class="footernav">
-      <li><a href="">Сообщить новость</a></li>
-      <li><a href="">Реклама</a></li>
-      <li><a href="">Обратная связь</a></li>
-    </ul>
-
-    <p class="copyright">
-       Все права защищены
-    </p><!-- /copyright -->
-
-  </div><!-- /.inner -->
-</footer><!-- /footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-
-</body>
-</html>

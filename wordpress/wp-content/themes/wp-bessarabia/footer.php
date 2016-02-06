@@ -1,19 +1,18 @@
     </div><!-- /.inner -->
   </section><!-- /section -->
-
 </div><!-- /wrapper -->
 
 <footer role="contentinfo">
   <div class="inner">
 
+    <?php wpeFootNav(); ?>
+
     <p class="copyright">
-      &copy; <?php echo date("Y"); ?> Собственность <?php bloginfo('name'); ?>.
+       Все права защищены
     </p><!-- /copyright -->
 
   </div><!-- /.inner -->
 </footer><!-- /footer -->
-
-    <?php wp_footer(); ?>
-
+  <?php wp_footer(); ?>
 </body>
 </html>

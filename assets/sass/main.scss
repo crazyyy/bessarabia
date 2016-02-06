@@ -295,10 +295,76 @@ section {
 article {
   @extend .clearfix;
 }
+.article-left-sidebar {
+  float: right;
+
+  width: 780px;
+}
 .looper {
   @extend .clearfix;
 }
+aside {
+  .widget {
+    padding: 0 12px 12px;
+    h6 {
+      font-size: 23px;
 
+      margin-right: -12px;
+      margin-bottom: 12px;
+      margin-left: -12px;
+      padding: 0 0 12px;
+
+      text-transform: uppercase;
+
+      color: #040404;
+      border-bottom: 1px solid #040404;
+    }
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .widget-last-news {
+    li {
+      position: relative;
+
+      display: block;
+
+      margin: 0 0 12px;
+      padding: 0 0 0 50px;
+      .time {
+        font-size: 16px;
+
+        position: absolute;
+        top: 2px;
+        left: 0;
+
+        display: block;
+
+        width: 35px;
+
+        text-align: center;
+
+        color: #fff;
+        background-color: $blue;
+      }
+      a {
+        color: #000;
+        &:hover {
+          text-decoration: none;
+
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+.sidebar-left {
+  float: left;
+
+  width: 300px;
+}
 
 footer {
   height: $footer;
@@ -325,6 +391,8 @@ footer {
         line-height: .8;
 
         margin: 0;
+
+        text-transform: capitalize;
 
         color: #fff;
       }

@@ -198,7 +198,6 @@ nav {
 
         display: none;
 
-
         height: auto;
         padding-bottom: 8px;
 
@@ -334,6 +333,21 @@ section {
 article {
   @extend .clearfix;
 }
+.single-title {
+  font-size: 23px;
+
+  float: left;
+
+  width: 100%;
+  margin: 0 0 12px;
+  margin-top: -14px;
+  padding: 0 260px 12px 0;
+
+  text-transform: uppercase;
+
+  color: #000;
+  border-bottom: 1px solid #000;
+}
 .article-left-sidebar {
   float: right;
 
@@ -342,11 +356,12 @@ article {
   padding-top: 30px;
   padding-bottom: 150px;
 
-  background-image: url(../img/logo-footer.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-
   @extend .clearfix;
+}
+.article-right-sidebar {
+  float: left;
+
+  width: 780px;
 }
 .looper {
   @extend .clearfix;
@@ -483,11 +498,50 @@ aside {
       }
     }
   }
+  .widget-cat-list {
+    margin: 0 0 50px;
+    h6 {
+      font-size: 20px;
+
+      margin: 0 0 16px;
+      padding: 8px;
+
+      color: #f8fbfd;
+      border-bottom: 0;
+    }
+    li {
+      font-size: 16px;
+
+      margin: 0 0 12px;
+      padding: 0 0 12px;
+
+      border-bottom: 1px solid #000;
+      a {
+        color: #565859;
+      }
+    }
+  }
+  .widget-cat-list-orange {
+    h6 {
+      background-color: #f37121;
+    }
+  }
+  .widget-cat-list-blue {
+    h6 {
+      background-color: #00aaad;
+    }
+  }
+}
+
+.sidebar-left,
+.sidebar-right {
+  width: 300px;
+}
+.sidebar-right {
+  float: right;
 }
 .sidebar-left {
   float: left;
-
-  width: 300px;
 }
 
 footer {
@@ -497,6 +551,21 @@ footer {
   background-color: $blue;
   .inner {
     height: $footer;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      top: -212px;
+      right: 0;
+
+      width: 327px;
+      height: 206px;
+
+      background-image: url(../img/logo-footer.png);
+      background-repeat: no-repeat;
+      background-position: right bottom;
+
+      @extend .dblock;
+    }
   }
   .footernav {
     position: absolute;

@@ -1,7 +1,7 @@
 <aside class="sidebar" role="complementary">
 
-  <?php if ( is_active_sidebar('widgetarea1') ) : ?>
-    <?php dynamic_sidebar( 'widgetarea1' ); ?>
+  <?php if ( is_active_sidebar('widgetarea2') ) : ?>
+    <?php dynamic_sidebar( 'widgetarea2' ); ?>
   <?php else : ?>
 
     <!-- If you want display static widget content - write code here

@@ -166,6 +166,8 @@ nav {
 
     @extend .clearfix;
     li {
+      position: relative;
+
       display: inline-block;
       float: left;
 
@@ -187,6 +189,43 @@ nav {
       }
       &:last-child {
         border-right: 0;
+      }
+      .sub-menu {
+        position: absolute;
+        z-index: 3;
+        top: 18px;
+        left: 0;
+
+        display: none;
+
+
+        height: auto;
+        padding-bottom: 8px;
+
+        border-top: 10px solid #565859;
+        li {
+          display: block;
+
+          width: 100%;
+          height: auto;
+          margin: 0;
+          padding: 0;
+
+          border-right: none;
+          a {
+            display: block;
+
+            width: 100%;
+            padding: 3px 8px;
+
+            background-color: #424345;
+          }
+        }
+      }
+      &:hover {
+        .sub-menu {
+          display: inline-block;
+        }
       }
     }
   }
@@ -299,7 +338,13 @@ article {
   float: right;
 
   width: 780px;
+  margin-bottom: 10px;
   padding-top: 30px;
+  padding-bottom: 150px;
+
+  background-image: url(../img/logo-footer.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 
   @extend .clearfix;
 }

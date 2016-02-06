@@ -136,11 +136,5 @@
         </table>
       </article>
 
-      <aside class="sidebar" role="complementary">
-        <div class="widget">
-          <h6>Пример виджета</h6>
-          <ul>
-            <li class="cat-item-none">Рубрик нет</li>
-          </ul>
-        </div><!-- widget -->
-      </aside><!-- /sidebar -->
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

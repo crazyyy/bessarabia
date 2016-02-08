@@ -8,6 +8,3 @@
   </div><!-- article-left-sidebar -->
 
 <?php get_footer(); ?>
-
-
-

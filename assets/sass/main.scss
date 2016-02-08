@@ -518,11 +518,32 @@ article {
     padding: 0 12px;
 
     color: #fff;
-    &.catid-news {
+    &.catid-kultura {
       background-color: orange;
     }
-    &.catid-articles {
+    &.catid-meditsina {
       background-color: #00a651;
+    }
+    &.catid-obrazovanie {
+      background-color: #00b5f0;
+    }
+    &.catid-politika {
+      background-color: #b0d136;
+    }
+    &.catid-sobytiya {
+      background-color: #00aaad;
+    }
+    &.catid-sport {
+      background-color: #f37121;
+    }
+    &.catid-ekonomika {
+      background-color: #ee3a23;
+    }
+    &.catid-else {
+      background-color: #00a651;
+    }
+    &.catid-else {
+      background-color: #051700;
     }
   }
   .inner-title {

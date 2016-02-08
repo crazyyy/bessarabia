@@ -1,30 +1,50 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
   <?php get_sidebar('left'); ?>
+  <div id="post-<?php the_ID(); ?>" <?php post_class('article-left-sidebar'); ?>>
 
-    <div id="post-<?php the_ID(); ?>" <?php post_class('article-left-sidebar'); ?>>
+    <?php query_posts("showposts=1&cat=1"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
 
-      <?php query_posts("showposts=10"); ?>
-        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+    <?php query_posts("showposts=1&cat=81"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class('front-loop looper'); ?>>
-              <a rel="nofollow"href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php if ( has_post_thumbnail()) :
-                  the_post_thumbnail('medium');
-                else: ?>
-                  <img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
-                <?php endif; ?>
-                <?php
-                  $category = get_the_category();
-                  if ($category) {
-                    echo '<span class="cat catid-'. $category[0]->slug .'">' . $category[0]->name .'</span> ';
-                  }
-                ?>
-                <h2 class="inner-title"><?php the_title(); ?></h2><!-- /post title -->
-                <span class="date"><span><?php the_time('G:i'); ?></span>, <?php the_time('j F Y'); ?></span>
-              </a>
-            </article><!-- /looper -->
+    <?php query_posts("showposts=1&cat=78"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
 
-        <?php endwhile; endif; ?>
-      <?php wp_reset_query(); ?>
-    </div><!-- article-left-sidebar -->
+    <?php query_posts("showposts=1&cat=79"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
+
+    <?php query_posts("showposts=1&cat=82"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
+
+    <?php query_posts("showposts=1&cat=83"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
+
+    <?php query_posts("showposts=1&cat=80"); ?>
+      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <?php get_template_part('front-page-loop'); ?>
+      <?php endwhile; endif; ?>
+    <?php wp_reset_query(); ?>
+
+  </div><!-- article-left-sidebar -->
 <?php get_footer(); ?>
+
+

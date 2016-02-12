@@ -39,7 +39,7 @@
       </div><!-- /logo -->
 
       <div class="zibrov">
-        <span></span>
+   <!--      <span></span> -->
       </div><!-- /.zibrov -->
 
       <nav class="nav" role="navigation">

@@ -3,7 +3,7 @@
   <div class="widget widget-last-news">
     <h6>НОВОСТИ</h6>
     <ul>
-      <?php query_posts("showposts=8&cat=1"); ?>
+      <?php query_posts("showposts=8"); ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <li>
           <span class="time"><?php the_time('G:i'); ?></span>

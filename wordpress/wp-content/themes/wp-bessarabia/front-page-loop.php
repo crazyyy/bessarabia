@@ -12,6 +12,6 @@
         }
       ?>
       <h2 class="inner-title"><?php the_title(); ?></h2><!-- /post title -->
-      <span class="date"><span><?php the_time('G:i'); ?></span>, <?php the_time('j F Y'); ?></span>
+      <span class="date"><?php the_time('j F Y'); ?></span>
     </a>
   </article><!-- /looper -->

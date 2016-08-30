@@ -20,6 +20,11 @@
     <![endif]-->
     <!-- css + javascript -->
     <?php wp_head(); ?>
+	<style>
+		.front-loop .cat.catid-kriminal {
+			background-color: black;
+		}
+	</style>
 </head>
 <body <?php body_class(); ?>>
 <!-- wrapper -->
@@ -39,15 +44,17 @@
       </div><!-- /logo -->
 
       <div class="zibrov">
-   <!--      <span></span> -->
+      <a href="http://arciz.org" Интернет-магазин цифровой техники в Арцизе target="_blank">
+	  <img src="http://arciz.org/ARCIZ.ORG.gif" alt="Купить компьютер в Арцизе" title="Интернет-магазин цифровой техники в Арцизе">
+	  </a>
       </div><!-- /.zibrov -->
 
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
         <ul class="socialnav">
-          <li class="soc-ico-vk"><a href=""></a></li>
-          <li class="soc-ico-od"><a href=""></a></li>
-          <li class="soc-ico-fb"><a href=""></a></li>
+          <li class="soc-ico-vk"><a href="https://vk.com/id351482207" title="Украинская Бессарабия в контакте" target="_blank"></a></li>
+          <li class="soc-ico-od"><a href="http://ok.ru/profile/584913344311" title="Украинская Бессарабия в Одноклассниках" target="_blank"></a></li>
+          <li class="soc-ico-fb"><a href="https://www.facebook.com/profile.php?id=100011347607243" title="Украинская Бессарабия в Facebook" target="_blank"></a></li>
           <li class="soc-ico-tw"><a href=""></a></li>
           <li class="soc-ico-gp"><a href=""></a></li>
         </ul><!-- socialnav -->

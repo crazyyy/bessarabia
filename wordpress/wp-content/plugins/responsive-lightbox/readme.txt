@@ -3,8 +3,8 @@ Contributors: dfactory
 Donate link: http://www.dfactory.eu/
 Tags: gallery, images, lightbox, links, photos, template, theme, photo, image, picture, slideshow, modal, overlay, YouTube, Vimeo, video, videos
 Requires at least: 4.0
-Tested up to: 4.4
-Stable tag: 1.6.6
+Tested up to: 4.6
+Stable tag: 1.6.9
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -22,6 +22,7 @@ For more information, check out plugin page at [dFactory](http://www.dfactory.eu
 * Automatically add lightbox to WordPress image galleries
 * Automatically add lightbox to WordPress image links
 * Automatically add lightbox to WordPress video links (YouTube, Vimeo)
+* WooCommerce product gallery support
 * Option to display single post images as a gallery
 * Option to modify native WP gallery links image size
 * Option to set gallery images title from image title, caption, alt or description
@@ -37,24 +38,10 @@ For more information, check out plugin page at [dFactory](http://www.dfactory.eu
 = Available Extensions: =
 
 * [Justified Gallery](https://www.dfactory.eu/products/justified-gallery/)
+* [Masonry Image Gallery](https://www.dfactory.eu/products/masonry-image-gallery/)
 * [Lightcase Lightbox](https://www.dfactory.eu/products/lightcase-lightbox/)
-
-= Translations: =
-
-* Czech - by Vaclav Hnilicka
-* Dutch - by [Sebas Blom](http://www.basbva.nl/)
-* Estonian - by Hugo Amtmann
-* French - by [Li-An](http://www.echodesplugins.li-an.fr/)
-* German - by [Andreas Reitberger](http://wdbase.de)
-* Hungarian - by [Zsolt Boda](http://cmfrt.net/)
-* Japanese - by stranger-jp
-* Persian - by [Ali Mirzaei](http://alimir.ir/)
-* Polish - by Bartosz Arendt
-* Romanian - by [Victor Chiritoiu](http://contacter.ro)
-* Russian - by [Konstantin](http://l-konstantin.ru)
-* Serbo-Croatian - by [Borisa Djuraskovic](http://www.webhostinghub.com/)
-* Slovak - by [Patrik Zec](http://patwist.com)
-* Spanish - by [Gaston](http://www.detodoynada.com.ar)
+* [PhotoSwipe Lightbox](https://www.dfactory.eu/products/photoswipe-lightbox/)
+* [Strip Lightbox](https://www.dfactory.eu/products/strip-lightbox/)
 
 
 == Installation ==
@@ -73,6 +60,22 @@ No questions yet.
 2. screenshot-2.jpg
 
 == Changelog ==
+
+= 1.6.9 =
+* New: [PhotoSwipe Lightbox](https://www.dfactory.eu/products/photoswipe-lightbox/) premium extension
+* Fix: data-rel attribute missing in multiline links
+* Tweak: Removed local translation files in favor of WP repository translations
+* Tweak: SwipeBox script updated to 1.4.4
+
+= 1.6.8 =
+* Tweak: Tos "R" Us script caption issue when empty link title
+* Tweak: Undefined notice on extentions activation.
+
+= 1.6.7 =
+* New: WooCommerce product gallery support
+* New: [Masonry Image Gallery](https://www.dfactory.eu/products/masonry-image-gallery/) and [Strip Lightbox](https://www.dfactory.eu/products/strip-lightbox/) extensions
+* Tweak: Tos"R"Us script updated to 2.4.2
+* Tweak: Settings handler improvements.
 
 = 1.6.6 =
 * Tweak: Confirmed WordPress 4.4 compatibility
@@ -274,5 +277,6 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.6.6 =
-* Tweak: Confirmed WordPress 4.4 compatibility
+= 1.6.9 =
+* New: [PhotoSwipe Lightbox](https://www.dfactory.eu/products/photoswipe-lightbox/) premium extension
+* Fix: data-rel attribute missing in multiline links

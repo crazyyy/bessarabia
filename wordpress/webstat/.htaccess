@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "/www/bessarabia.in.ua/webstat/"
+AuthUserFile /var/www/bessarabia/data/etc/9217691.passwd
+<Limit GET POST>
+	require valid-user
+</Limit>

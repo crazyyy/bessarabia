@@ -1,69 +1,50 @@
-User-Agent: *
-Sitemap: http://crazyyy.net.ua/sitemap.xml
-
-User-Agent: *
-Crawl-Delay: 10
 User-agent: Yandex
-Crawl-delay: 10
-User-agent: Googlebot
-Crawl-delay: 10
-Disallow:
-User-agent: StackRambler
-Crawl-delay: 10
-Disallow: 
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+Disallow: /xmlrpc.php
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-trackback
+Disallow: /wp-feed
+Disallow: /wp-comments
+Disallow: /tag
+Disallow: /archive
+Disallow: */trackback
+Disallow: */comments
+Disallow: */trackback/
+Disallow: */feed/
+Disallow: */comments/
+Disallow: /?feed=
+Disallow: /?s=
+Host: bessarabia.in.ua
 
 User-agent: *
-Disallow: /cgi-bin
-Disallow: /sxd
-Disallow: /wp-admin
-Disallow: /wp-includes
-Disallow: /wp-content/plugins
-Disallow: /wp-content/cache
-Disallow: /wp-content/themes
 Disallow: /wp-login.php
 Disallow: /wp-register.php
-Disallow: /trackback
-Disallow: /feed
-Disallow: /rss
-Disallow: */trackback
-Disallow: */feed
-Disallow: */rss
 Disallow: /xmlrpc.php
-Disallow: /author*
-Disallow: */comments
-Disallow: */comment-page*
-Disallow: /*?*
-Disallow: /*?
-
-Allow: /wp-content/uploads
-
-User-agent: Yandex
-Disallow: /cgi-bin
+Disallow: /template.html
 Disallow: /wp-admin
 Disallow: /wp-includes
-Disallow: /wp-content/plugins
 Disallow: /wp-content/cache
-Disallow: /wp-content/themes
-Disallow: /wp-login.php
-Disallow: /wp-register.php
-Disallow: /trackback
-Disallow: /feed
-Disallow: /rss
+Disallow: /wp-trackback
+Disallow: /wp-feed
+Disallow: /wp-comments
+Disallow: /tag
+Disallow: /archive
 Disallow: */trackback
-Disallow: */feed
-Disallow: */rss
-Disallow: /xmlrpc.php
 Disallow: */comments
-Disallow: */comment-page*
-Disallow: /*?*
-Disallow: /*?
+Disallow: */trackback/
+Disallow: */feed/
+Disallow: */comments/
+Disallow: /?feed=
+Disallow: /?s=
 
-Allow: /wp-content/uploads
-
+Sitemap: http://bessarabia.in.ua/sitemap.xml 
+ 
 User-agent: Googlebot-Image
-Disallow:
-Allow: /*
-
-User-agent: YandexBlog
-Disallow:
-Allow: /*
+Allow: /wp-content/uploads/
+ 
+User-agent: YandexImages
+Allow: /wp-content/uploads/

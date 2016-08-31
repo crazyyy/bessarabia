@@ -755,32 +755,54 @@ footer {
 //** Media Query **/
 
 @media (max-width:1120px) {
-  .inner {
-    width: 1120px;
+ body, html {
+    width:100%;
+  }
+
+.inner {
+    width: 100%;
+    margin:0 auto;
   }
   .front-loop {
     width: 370px;
   }
   .header-search {
-    right: 30px;
+    right: -810px;
+    top: 110px;
+    position:relative;
   }
   header {
     &::before {
-      right: 30px;
+      width: 100%;
+      position:relative;
     }
+    .inner {
+      width: 100%;
+    margin: 0 auto;
+    .logo {
+          top: 50px;
+    }
+
     .nav {
-      right: 30px;
+      position:relative;
+      top: 100px;
+      width: 1040px;
     }
     .zibrov {
-      right: 140px;
+      right: -600px;
+      position:relative;
+      top: 70px;
+    }
     }
   }
   footer {
     position: relative;
     left: 0;
-
-    width: 1070px;
+    margin:0;
+    width: 100%;
     .inner {
+      width: 100%;
+    margin: 0 auto;
       &:after {
         right: 100px;
       }
@@ -791,21 +813,31 @@ footer {
   }
 }
 @media (max-width:1100px) {
-  .inner {
-    width: 1100px;
+  body {
+    width:100%;
   }
+
   .front-loop {
     width: 350px;
   }
   .header-search {
-    right: 50px;
+    right: -810px;
+    top: 110px;
+    position:relative;
   }
   header {
     &::before {
-      right: 50px;
+      width: 960px;
     }
+    .inner {
+    width: 100%;
+    margin:0 auto;
+  }
     .nav {
-      right: 50px;
+      width: 960px;
+      .socialnav {
+        float:left;
+      }
     }
     .zibrov {
       right: 140px;
@@ -818,7 +850,7 @@ footer {
     width: 1050px;
     .inner {
       &:after {
-        right: 110px;
+        width: 960px;
       }
     }
     .copyright {
@@ -833,7 +865,7 @@ footer {
     width: 725px;
   }
   .inner {
-    width: 1070px;
+    width: 100%;
   }
   .front-loop {
     width: 320px;
@@ -851,18 +883,25 @@ footer {
     }
   }
   .header-search {
-    right: 11%;
+    right: -730px;
+    top: 110px;
+    position:relative;
   }
   header {
     &::before {
       right: 11%;
     }
-    .nav {
-      right: 11%;
+    .inner {
+        .nav {
+      width: 960px;
     }
     .zibrov {
-      right: 140px;
+     right: -500px;
+    position: relative;
+    top: 70px;
     }
+      }
+
   }
   .sidebar-left {
     .widget-last-news {
@@ -878,8 +917,6 @@ footer {
   footer {
     position: relative;
     left: 0;
-
-    width: 1020px;
     .inner {
       &:after {
         right: 20%;
@@ -898,7 +935,7 @@ footer {
     width: 600px;
   }
   .inner {
-    width: 1000px;
+    width: 100%;
   }
   .front-loop {
     width: 270px;
@@ -917,23 +954,26 @@ footer {
     }
   }
   .header-search {
-    right: 15%;
+    right: -635px;
+    top: 110px;
+    position:relative;
   }
   header {
     &::before {
-      right: 15%;
+    width: 865px;
     }
     .inner {
       .nav {
-        right: 15%;
+        width: 865px;
       }
       .zibrov {
-        right: 15%;
-
-        width: 375px;
+        width: 365px;
+        right: -500px;
+    position: relative;
+    top: 70px;
         a {
           img {
-            max-width: 95%;
+            max-width: 100%;
           }
         }
       }
@@ -954,12 +994,6 @@ footer {
     position: relative;
     left: 0;
 
-    width: 950px;
-    .inner {
-      &:after {
-        right: 20%;
-      }
-    }
     .copyright {
       right: 20%;
     }
@@ -994,18 +1028,25 @@ footer {
     }
   }
   .header-search {
-    right: 18%;
+    right: -590px;
+    top: 80px;
+    position: relative;
   }
   header {
     &::before {
-      right: 18%;
+      width: 820px;
     }
     .inner {
       .nav {
-        right: 18%;
+      position:relative;
+      top: 0;
+      width: 820px;
       }
       .zibrov {
-        right: 140px;
+        right: -473px;
+    position: relative;
+    top: -145px;;
+
       }
     }
   }
@@ -1030,8 +1071,6 @@ footer {
   footer {
     position: relative;
     left: 0;
-
-    width: 950px;
     .inner {
       &:after {
         right: 20%;
@@ -1072,7 +1111,7 @@ footer {
     .nav {
       position: relative;
       top: 40px;
-      width: 80%;
+      width: 790px;
       ul {
         li {
           a {
@@ -1112,7 +1151,7 @@ footer {
       position: relative;
       top: 0;
       left: 0;
-      width: 78%;
+      width: 790px;
     }
   }
     .sidebar-left {
@@ -1137,8 +1176,6 @@ footer {
     footer {
       position: relative;
       left: 0;
-
-      width: 950px;
       .inner {
         &:after {
           right: 30%;
@@ -1180,7 +1217,7 @@ footer {
     .nav {
       position: relative;
       top: 40px;
-      width: 76%;
+      width: 760px;
       ul {
         li {
           a {
@@ -1220,7 +1257,7 @@ footer {
       position: relative;
       top: 0;
       left: 0;
-      width: 73%;
+      width: 760px;
     }
   }
     .sidebar-left {
@@ -1245,8 +1282,6 @@ footer {
     footer {
       position: relative;
       left: 0;
-
-      width: 950px;
       .inner {
         &:after {
           right: 30%;
@@ -1287,7 +1322,8 @@ footer {
     .nav {
       position: relative;
       top: 40px;
-      width: 72%;
+       width: 720px;
+
       ul {
         li {
           a {
@@ -1326,7 +1362,7 @@ footer {
       position: relative;
       top: 0;
       left: 0;
-      width: 70%;
+       width: 720px;
     }
   }
     .sidebar-left {
@@ -1351,7 +1387,6 @@ footer {
       position: relative;
       left: 0;
 
-      width: 950px;
       .inner {
         &:after {
           right: 50%;
@@ -1364,16 +1399,19 @@ footer {
   }
 
 @media (max-width:720px) {
-  .article-left-sidebar {
+  section {
+    .inner {
+    .article-left-sidebar {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-
+  }
+  }
   header {
     .inner {
+      width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -1394,13 +1432,16 @@ footer {
     .nav {
       position: relative;
       top: 40px;
-      width: 71%;
+    width: 690px;
       ul {
         li {
           a {
             font-size: 13px;
           }
         }
+      }
+      .socialnav {
+        float:left;
       }
     }
     .header-search {
@@ -1439,7 +1480,7 @@ footer {
       position: relative;
       top: 0;
       left: 0;
-      width: 70%;
+      width: 690px;
     }
   }
     .sidebar-left {
@@ -1464,7 +1505,6 @@ footer {
       position: relative;
       left: 0;
 
-      width: 950px;
       .inner {
         &:after {
           right: 50%;

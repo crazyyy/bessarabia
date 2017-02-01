@@ -22,7 +22,7 @@
     <div class="widget widget-last-news">
       <h6>Последние НОВОСТИ</h6>
       <ul>
-        <?php query_posts("showposts=15"); ?>
+        <?php query_posts("showposts=20"); ?>
           <?php
             $today = date('Y-m-d');
             if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -49,6 +49,7 @@
 
   <?php } ?>
 
+  <?php /* ?>
   <div class="widget widget-last-news">
     <h6>ВСЕ НОВОСТИ</h6>
     <ul>
@@ -77,6 +78,7 @@
       <?php wp_reset_query(); ?>
     </ul>
   </div><!-- /.widget widget-last-news -->
+  <?php */ ?>
 
   <?php if ( is_active_sidebar('widgetarea1') ) : ?>
     <?php dynamic_sidebar( 'widgetarea1' ); ?>

@@ -40,7 +40,7 @@
       </div><!-- /logo -->
 
       <div class="zibrov">
-      <a href="http://arciz.org" Интернет-магазин цифровой техники в Арцизе target="_blank">
+      <a rel="nofollow" href="http://arciz.org" title="Интернет-магазин цифровой техники в Арцизе" target="_blank">
         <img src="http://arciz.org/ARCIZ.ORG.gif" alt="Купить компьютер в Арцизе" title="Интернет-магазин цифровой техники в Арцизе">
 	    </a>
       </div><!-- /.zibrov -->

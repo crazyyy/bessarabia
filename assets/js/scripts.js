@@ -20,3 +20,16 @@
 function clearThis(target){
   $(target).val = "";
 }
+
+
+(function() {
+  var $elements = $('.front-loop');
+  var maxheight = 0;
+  $elements.each(function() {
+    if ($(this).height() > maxheight) {
+      maxheight = $(this).height();
+    }
+  });
+  $elements.height(maxheight);
+
+}());

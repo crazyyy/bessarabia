@@ -6,12 +6,15 @@
 @import 'import/tables';
 @import 'import/mixin';
 @import 'import/wordpress';
+@import 'import/bxslider';
 @import 'grid/bootstrap';
 @import 'grid/bootstrap-theme';
 @import 'sprite';
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_opensans';
 @import 'fonts/font_roboto';
+
+
 html,
 body {
   min-width: $width;
@@ -296,6 +299,11 @@ article {
   @extend .clearfix;
 }
 
+.home-slider {
+  height: 350px;
+  background-color: red;
+}
+
 .cat-title {
   font-size: 23px;
   float: left;
@@ -418,7 +426,7 @@ article {
   float: left;
   width: 380px;
   // height: 360px;
-  margin: 0 10px 65px;
+  margin: 0 10px 35px;
   background-color: #f7f7f7;
   &:nth-child(odd) {
     margin-left: 0;
@@ -487,6 +495,7 @@ article {
     font-size: 22px;
     padding: 0 12px;
     color: #000;
+    margin-bottom: 30px;
   }
   .date {
     font-size: 12px;

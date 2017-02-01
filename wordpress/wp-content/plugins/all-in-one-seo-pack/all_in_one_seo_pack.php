@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: All In One SEO Pack
-Plugin URI: http://semperfiwebdesign.com
+Plugin URI: https://semperfiwebdesign.com
 Description: Out-of-the-box SEO for your WordPress blog. Features like XML Sitemaps, SEO for custom post types, SEO for blogs or business sites, SEO for ecommerce sites, and much more. Almost 30 million downloads since 2007.
-Version: 2.3.9.1
+Version: 2.3.11.3
 Author: Michael Torbert
-Author URI: http://michaeltorbert.com
+Author URI: https://michaeltorbert.com
 Text Domain: all-in-one-seo-pack
 Domain Path: /i18n/
 */
@@ -31,14 +31,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * The original WordPress SEO plugin.
  *
  * @package All-in-One-SEO-Pack
- * @version 2.3.9.1
+ * @version 2.3.11.3
  */
 
 if ( ! defined( 'AIOSEOPPRO' ) ) {
 	define( 'AIOSEOPPRO', false );
 }
 if ( ! defined( 'AIOSEOP_VERSION' ) ) {
-	define( 'AIOSEOP_VERSION', '2.3.9.1' );
+	define( 'AIOSEOP_VERSION', '2.3.11.3' );
 }
 global $aioseop_plugin_name;
 $aioseop_plugin_name = 'All in One SEO Pack';
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( AIOSEOPPRO ) {
 
-	add_action( 'admin_init', 'disable_all_in_one_free', 1 );
+	add_action( 'admin_head', 'disable_all_in_one_free', 1 );
 
 }
 
@@ -77,7 +77,6 @@ if ( ! defined( 'AIOSEOP_PLUGIN_NAME' ) ) {
 	define( 'AIOSEOP_PLUGIN_NAME', $aioseop_plugin_name );
 }
 
-// Do we need this? register_activation_hook(__FILE__,'aioseop_activate_pl');.
 if ( ! defined( 'AIOSEOP_PLUGIN_DIR' ) ) {
 	define( 'AIOSEOP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 } elseif ( AIOSEOP_PLUGIN_DIR !== plugin_dir_path( __FILE__ ) ) {
@@ -216,8 +215,12 @@ if ( class_exists( 'All_in_One_SEO_Pack' ) ) {
 if ( AIOSEOPPRO ) {
 
 	require( AIOSEOP_PLUGIN_DIR . 'pro/sfwd_update_checker.php' );
+	$aiosp_update_url = 'https://semperplugins.com/upgrade_plugins.php';
+	if( defined( 'AIOSEOP_UPDATE_URL' ) ) {
+		$aiosp_update_url = AIOSEOP_UPDATE_URL;
+	}
 	$aioseop_update_checker = new SFWD_Update_Checker(
-		'http://semperplugins.com/upgrade_plugins.php',
+		$aiosp_update_url,
 		__FILE__,
 		'aioseop'
 	);
@@ -229,8 +232,8 @@ if ( AIOSEOPPRO ) {
 	} else {
 		$aioseop_update_checker->license_key = '';
 	}
-	$aioseop_update_checker->options_page = 'all-in-one-seo-pack-pro/aioseop_class.php';
-	$aioseop_update_checker->renewal_page = 'http://semperplugins.com/all-in-one-seo-pack-pro-support-updates-renewal/';
+	$aioseop_update_checker->options_page = AIOSEOP_PLUGIN_DIRNAME . "/aioseop_class.php";
+	$aioseop_update_checker->renewal_page = 'https://semperplugins.com/all-in-one-seo-pack-pro-support-updates-renewal/';
 
 	$aioseop_update_checker->addQueryArgFilter( array( $aioseop_update_checker, 'add_secret_key' ) );
 }
@@ -246,6 +249,11 @@ if ( ! function_exists( 'aioseop_activate' ) ) {
 			global $aioseop_update_checker;
 		}
 		$aiosp_activation = true;
+
+		// These checks might be duplicated in the function being called.
+		if( ! is_network_admin() || !isset( $_GET['activate-multi'] ) ) {
+			set_transient( '_aioseop_activation_redirect', true, 30 ); // Sets 30 second transient for welcome screen redirect on activation.
+			}
 
 		delete_user_meta( get_current_user_id(), 'aioseop_yst_detected_notice_dismissed' );
 
@@ -272,14 +280,6 @@ if ( ! function_exists( 'aiosp_plugin_row_meta' ) ) {
 		if ( ! AIOSEOPPRO ) {
 
 			$action_links = array(
-				'donatelink' => array(
-					'label' => __( 'Donate', 'all-in-one-seo-pack' ),
-					'url'   => 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mrtorbert%40gmail%2ecom&item_name=All%20In%20One%20SEO%20Pack&item_number=Support%20Open%20Source&no_shipping=0&no_note=1&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8',
-				),
-				'amazon'     => array(
-					'label' => __( 'Amazon Wishlist', 'all-in-one-seo-pack' ),
-					'url'   => 'https://www.amazon.com/wishlist/1NFQ133FNCOOA/ref=wl_web',
-				),
 
 			);
 
@@ -314,12 +314,12 @@ if ( ! function_exists( 'aiosp_add_action_links' ) ) {
 
 			'forum' => array(
 				'label' => __( 'Support Forum', 'all-in-one-seo-pack' ),
-				'url'   => 'http://semperplugins.com/support/',
+				'url'   => 'https://semperplugins.com/support/',
 			),
 
 			'docs' => array(
 				'label' => __( 'Documentation', 'all-in-one-seo-pack' ),
-				'url'   => 'http://semperplugins.com/documentation/',
+				'url'   => 'https://semperplugins.com/documentation/',
 			),
 
 		);
@@ -330,7 +330,7 @@ if ( ! function_exists( 'aiosp_add_action_links' ) ) {
 			$action_links['proupgrade'] =
 				array(
 					'label' => __( 'Upgrade to Pro', 'all-in-one-seo-pack' ),
-					'url'   => 'http://semperplugins.com/plugins/all-in-one-seo-pack-pro-version/?loc=plugins',
+					'url'   => 'https://semperplugins.com/plugins/all-in-one-seo-pack-pro-version/?loc=plugins',
 
 				);
 		}
@@ -384,6 +384,11 @@ if ( ! function_exists( 'aioseop_init_class' ) ) {
 		require_once( AIOSEOP_PLUGIN_DIR . 'public/opengraph.php' );
 		require_once( AIOSEOP_PLUGIN_DIR . 'inc/compatability/compat-init.php');
 		require_once( AIOSEOP_PLUGIN_DIR . 'public/front.php' );
+		require_once( AIOSEOP_PLUGIN_DIR . 'public/google-analytics.php' );
+		require_once( AIOSEOP_PLUGIN_DIR . 'admin/display/welcome.php' );
+		require_once( AIOSEOP_PLUGIN_DIR . 'admin/display/dashboard_widget.php' );
+
+		$aioseop_welcome = new aioseop_welcome(); // TODO move this to updates file.
 
 		if ( AIOSEOPPRO ) {
 			require_once( AIOSEOP_PLUGIN_DIR . 'pro/class-aio-pro-init.php' ); // Loads pro files and other pro init stuff.
@@ -398,6 +403,8 @@ if ( ! function_exists( 'aioseop_init_class' ) ) {
 			$aioseop_pro_updates = new AIOSEOP_Pro_Updates();
 			add_action( 'admin_init', array( $aioseop_pro_updates, 'version_updates' ), 12 );
 		}
+
+		add_action( 'admin_init', 'aioseop_welcome' );
 
 		if ( aioseop_option_isset( 'aiosp_unprotect_meta' ) ) {
 			add_filter( 'is_protected_meta', 'aioseop_unprotect_meta', 10, 3 );
@@ -416,6 +423,19 @@ if ( ! function_exists( 'aioseop_init_class' ) ) {
 				$current_screen = WP_Screen::get( 'front' );
 			}
 		}
+	}
+}
+
+
+
+if ( ! function_exists( 'aioseop_welcome' ) ){
+	function aioseop_welcome(){
+		if( get_transient( '_aioseop_activation_redirect') ){
+			$aioseop_welcome = new aioseop_welcome();
+			delete_transient( '_aioseop_activation_redirect' );
+			$aioseop_welcome->init( TRUE );
+		}
+
 	}
 }
 

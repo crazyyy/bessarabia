@@ -16,6 +16,7 @@ class AIOSEOP_Updates {
 	 *
 	 */
 	function __construct() {
+
 	}
 
 	/**
@@ -54,6 +55,13 @@ class AIOSEOP_Updates {
 				$aioseop_options['last_active_version'] = AIOSEOP_VERSION;
 				$aiosp->update_class_option( $aioseop_options );
 			}
+
+			if( ! is_network_admin() || !isset( $_GET['activate-multi'] ) ) {
+				//set_transient( '_aioseop_activation_redirect', true, 30 ); // Sets 30 second transient for welcome screen redirect on activation.
+			}
+			delete_transient( 'aioseop_feed' );
+		//	add_action( 'admin_init', array( $this, 'aioseop_welcome' ) );
+
 		}
 
 		/**
@@ -61,6 +69,15 @@ class AIOSEOP_Updates {
 		 * just the plugin version.
 		 */
 		$this->do_feature_updates();
+	}
+
+	function aioseop_welcome(){
+		if ( get_transient( '_aioseop_activation_redirect' ) ) {
+			delete_transient( '_aioseop_activation_redirect' );
+			$aioseop_welcome = new aioseop_welcome();
+			$aioseop_welcome->init( TRUE );
+		}
+
 	}
 
 	/**
@@ -93,6 +110,7 @@ class AIOSEOP_Updates {
 			( AIOSEOPPRO && version_compare( $old_version, '2.4.9', '<' ) )
 		) {
 			$this->bad_bots_remove_seznambot_201608();
+			set_transient( '_aioseop_activation_redirect', true, 30 ); // Sets 30 second transient for welcome screen redirect on activation.
 		}
 
 	}

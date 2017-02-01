@@ -20,28 +20,7 @@
     <![endif]-->
     <!-- css + javascript -->
     <?php wp_head(); ?>
-	<style>
-		.front-loop .cat.catid-kriminal {
-			background-color: black;
-		}
-		@media (max-width: 720px) {
-  header .inner .header-search {
-    position: relative;
-    top: 40px;
-    left: 0;
 
-    display: block;
-
-    width: 100%;
-    /* top: 3px; */
-    /* left: 390px; */
-    height: 50px;
-  }
-  section {
-    padding-top: 100px;
-  }
-}
-	</style>
 </head>
 <body <?php body_class(); ?>>
 <!-- wrapper -->
@@ -62,18 +41,18 @@
 
       <div class="zibrov">
       <a href="http://arciz.org" Интернет-магазин цифровой техники в Арцизе target="_blank">
-	  <img src="http://arciz.org/ARCIZ.ORG.gif" alt="Купить компьютер в Арцизе" title="Интернет-магазин цифровой техники в Арцизе">
-	  </a>
+        <img src="http://arciz.org/ARCIZ.ORG.gif" alt="Купить компьютер в Арцизе" title="Интернет-магазин цифровой техники в Арцизе">
+	    </a>
       </div><!-- /.zibrov -->
 
       <nav class="nav" role="navigation">
         <?php wpeHeadNav(); ?>
         <ul class="socialnav">
-          <li class="soc-ico-vk"><a href="https://vk.com/id351482207" title="Украинская Бессарабия в контакте" target="_blank"></a></li>
-          <li class="soc-ico-od"><a href="http://ok.ru/profile/584913344311" title="Украинская Бессарабия в Одноклассниках" target="_blank"></a></li>
-          <li class="soc-ico-fb"><a href="https://www.facebook.com/profile.php?id=100011347607243" title="Украинская Бессарабия в Facebook" target="_blank"></a></li>
-          <li class="soc-ico-tw"><a href=""></a></li>
-          <li class="soc-ico-gp"><a href=""></a></li>
+          <li class="soc-ico-vk"><a rel="nofollow" href="https://vk.com/id351482207" title="Украинская Бессарабия в контакте" target="_blank"></a></li>
+          <li class="soc-ico-od"><a rel="nofollow" href="http://ok.ru/profile/584913344311" title="Украинская Бессарабия в Одноклассниках" target="_blank"></a></li>
+          <li class="soc-ico-fb"><a rel="nofollow" href="https://www.facebook.com/profile.php?id=100011347607243" title="Украинская Бессарабия в Facebook" target="_blank"></a></li>
+          <li class="soc-ico-tw"><a rel="nofollow" href=""></a></li>
+          <li class="soc-ico-gp"><a rel="nofollow" href=""></a></li>
         </ul><!-- socialnav -->
       </nav><!-- /nav -->
 

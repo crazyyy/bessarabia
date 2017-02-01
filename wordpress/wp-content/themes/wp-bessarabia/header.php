@@ -24,6 +24,23 @@
 		.front-loop .cat.catid-kriminal {
 			background-color: black;
 		}
+		@media (max-width: 720px) {
+  header .inner .header-search {
+    position: relative;
+    top: 40px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    /* top: 3px; */
+    /* left: 390px; */
+    height: 50px;
+  }
+  section {
+    padding-top: 100px;
+  }
+}
 	</style>
 </head>
 <body <?php body_class(); ?>>

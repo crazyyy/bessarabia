@@ -13,8 +13,6 @@
 @import 'fonts/font_fontawesome';
 @import 'fonts/font_opensans';
 @import 'fonts/font_roboto';
-
-
 html,
 body {
   min-width: $width;
@@ -297,11 +295,81 @@ section {
 
 article {
   @extend .clearfix;
+  em {
+    font-style: italic;
+
+  }
+  strong {
+    font-weight: bold;
+  }
 }
 
 .home-slider {
   height: 350px;
-  background-color: red;
+  margin-bottom: 80px;
+  position: relative;
+  .bx-wrapper {
+    overflow: hidden;
+    height: 350px;
+  }
+  .bxslider {
+    li {
+      height: 350px;
+      a {
+        @extend .align-center;
+        display: block;
+        height: 350px;
+        position: relative;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+        h2 {
+          position: absolute;
+          top: 20px;
+          background-color: rgba(0, 0, 0, 0.62);
+          ;
+          text-align: center;
+          left: 0;
+          padding: 15px 0;
+          right: 0;
+          font-size: 24px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  #bx-pager {
+    height: 50px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    bottom: -60px;
+    a {
+      width: 10%;
+      margin: 0 15px;
+      border: 5px solid #565859;
+      display: inline-block;
+      img {
+        width: 100%;
+      }
+      &.active {
+        border-color: #00b8f1;
+      }
+    }
+  }
+}
+
+.bx-wrapper .bx-viewport {
+  box-shadow: none;
+  border: 0;
 }
 
 .cat-title {
@@ -428,10 +496,10 @@ article {
   // height: 360px;
   margin: 0 10px 35px;
   background-color: #f7f7f7;
-  &:nth-child(odd) {
+  &:nth-child(even) {
     margin-left: 0;
   }
-  &:nth-child(even) {
+  &:nth-child(odd) {
     margin-right: 0;
   }
   a {

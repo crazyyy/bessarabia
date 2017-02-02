@@ -490,6 +490,7 @@ function clearThis(target) {
 (function () {
   console.log('sex');
   $('.bxslider').bxSlider({
+     auto: true,
     pagerCustom: '#bx-pager'
   });
 }());

@@ -3,6 +3,7 @@
   <?php query_posts("showposts=15"); ?>
 
   <?php
+  /*
     $today = date('Y-m-d');
     $i = 0;
     if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -17,7 +18,9 @@
   <?php wp_reset_query(); ?>
 
 
-  <?php if ( $i > 0 ) { ?>
+  <?php if ( $i > 0 ) {
+
+  */ ?>
 
     <div class="widget widget-last-news">
       <h6>Последние НОВОСТИ</h6>
@@ -29,10 +32,12 @@
           ?>
 
             <?php
+            $posttime = get_the_time('H:i');
+            /*
               $postdate = get_the_date('Y-m-d');
               if ( $today == $postdate ) {
                 $posttime = get_the_time('H:i');
-
+*/
                 ?>
 
                   <li>
@@ -40,14 +45,20 @@
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                   </li>
 
-            <?php } ?>
+            <?php
+            /*
+            }
+            */
+            ?>
 
           <?php endwhile; endif; ?>
         <?php wp_reset_query(); ?>
       </ul>
     </div><!-- /.widget widget-last-news -->
 
-  <?php } ?>
+  <?php
+  /* }
+  */?>
 
   <?php /* ?>
   <div class="widget widget-last-news">

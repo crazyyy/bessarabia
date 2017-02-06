@@ -1505,6 +1505,9 @@ footer {
 }
 
 @media (max-width:720px) {
+  .home-slider {
+    display: none;
+  }
   section {
     .inner {
       .article-left-sidebar {

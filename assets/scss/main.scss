@@ -19,6 +19,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+
   animation: fadein 2s;
 }
 
@@ -27,8 +28,10 @@ body {
   font-size: $base-font-size;
   font-weight: $f-norm;
   line-height: $base-line-height;
+
   color: $base-font-color;
   background-color: $base-background-color;
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -41,6 +44,7 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
+
   margin: 0 0 $small-spacing;
 }
 
@@ -52,6 +56,7 @@ pre {
 a {
   transition: $base-transition;
   text-decoration: none;
+
   color: $action-color;
   &:active,
   &:focus,
@@ -67,6 +72,7 @@ a {
 
 hr {
   margin: $base-spacing 0;
+
   border-top: none;
   border-right: none;
   border-bottom: $base-border;
@@ -81,23 +87,28 @@ picture {
 
 .wrapper {
   position: relative;
+
   width: 100%;
   height: auto !important;
   height: 100%;
   min-height: 100%;
   margin: 0 auto;
+
   @extend .clearfix;
 }
 
 .inner {
   position: relative;
+
   width: $width;
   margin: 0 auto;
+
   @extend .clearfix;
 }
 
 header {
   position: relative;
+
   height: 274px;
   &:before {
     position: absolute;
@@ -105,8 +116,11 @@ header {
     top: 0;
     right: 0;
     left: 0;
+
     height: 45px;
+
     background-color: $blue;
+
     @extend .dblock;
   }
   .inner {
@@ -116,7 +130,9 @@ header {
     position: absolute;
     top: 70px;
     left: 0;
+
     display: block;
+
     width: 474px;
     height: 107px;
     img {
@@ -127,12 +143,15 @@ header {
     position: absolute;
     top: 84px;
     right: 0;
+
     width: 468px;
     height: 60px;
     span {
       display: block;
+
       width: 100%;
       height: 100%;
+
       background-color: yellow;
     }
   }
@@ -143,26 +162,36 @@ nav {
   top: 190px;
   right: 0;
   left: 0;
+
   height: 44px;
   padding: 10px 0;
+
   background-color: #565859;
+
   @extend .clearfix;
   .headnav {
     float: left;
+
     padding: 0;
+
     @extend .clearfix;
     li {
       position: relative;
+
       display: inline-block;
       float: left;
+
       height: 22px;
       margin: 0;
       padding: 0;
+
       border-right: 1px solid #fff;
       a {
         padding: 0 12px;
+
         text-decoration: none;
         text-transform: uppercase;
+
         color: #fff;
         &:hover {
           color: $blue;
@@ -176,21 +205,28 @@ nav {
         z-index: 3;
         top: 18px;
         left: 0;
+
         display: none;
+
         height: auto;
         padding-bottom: 8px;
+
         border-top: 10px solid #565859;
         li {
           display: block;
+
           width: 100%;
           height: auto;
           margin: 0;
           padding: 0;
+
           border-right: none;
           a {
             display: block;
+
             width: 100%;
             padding: 3px 8px;
+
             background-color: #424345;
           }
         }
@@ -204,17 +240,22 @@ nav {
   }
   .socialnav {
     float: right;
+
     width: 210px;
     padding: 0 10px;
+
     text-align: right;
     li {
       display: inline-block;
+
       width: 26px;
       height: 26px;
       margin: 0 2px;
       a {
         display: block;
+
         height: 100%;
+
         opacity: .8;
         background-repeat: no-repeat;
         background-position: center;
@@ -258,9 +299,12 @@ nav {
   z-index: 1;
   top: 260px;
   right: 0;
+
   overflow: hidden;
+
   width: 230px;
   height: 30px;
+
   border-radius: 3px;
   input {
     margin: 0;
@@ -269,6 +313,7 @@ nav {
   input[type='text'] {
     width: 100%;
     height: 100%;
+
     color: #fff;
     background-color: $blue;
   }
@@ -278,9 +323,13 @@ nav {
     top: 0;
     right: 0;
     bottom: 0;
+
     display: block;
+
     width: 30px;
+
     cursor: pointer;
+
     border: 0;
     background-color: transparent;
     background-image: url(../img/ico/ico-search.png);
@@ -297,7 +346,6 @@ article {
   @extend .clearfix;
   em {
     font-style: italic;
-
   }
   strong {
     font-weight: bold;
@@ -305,58 +353,72 @@ article {
 }
 
 .home-slider {
+  position: relative;
+
   height: 350px;
   margin-bottom: 80px;
-  position: relative;
   .bx-wrapper {
     overflow: hidden;
+
     height: 350px;
   }
   .bxslider {
     li {
       height: 350px;
       a {
-        @extend .align-center;
-        display: block;
-        height: 350px;
         position: relative;
+
+        display: block;
+
         width: 100%;
+        height: 350px;
+
+        @extend .align-center;
         img {
           width: 100%;
         }
         h2 {
+          font-size: 24px;
+
           position: absolute;
           top: 20px;
-          background-color: rgba(0, 0, 0, 0.62);
-          ;
-          text-align: center;
-          left: 0;
-          padding: 15px 0;
           right: 0;
-          font-size: 24px;
+          left: 0;
+
+          padding: 15px 0;
+
+          text-align: center;
+
           color: #fff;
+          background-color: rgba(4, 3, 70, .55);
+          ;
         }
       }
     }
   }
   #bx-pager {
-    height: 50px;
     position: absolute;
-    overflow: hidden;
-    left: 0;
     right: 0;
+    bottom: -60px;
+    left: 0;
+
     display: flex;
+    overflow: hidden;
     flex-direction: row;
+
+    height: 50px;
+
     flex-wrap: nowrap;
     justify-content: center;
     align-content: space-around;
     align-items: center;
-    bottom: -60px;
     a {
+      display: inline-block;
+
       width: 10%;
       margin: 0 15px;
+
       border: 5px solid #565859;
-      display: inline-block;
       img {
         width: 100%;
       }
@@ -368,46 +430,59 @@ article {
 }
 
 .bx-wrapper .bx-viewport {
-  box-shadow: none;
   border: 0;
+  box-shadow: none;
 }
 
 .cat-title {
   font-size: 23px;
+
   float: left;
+
   width: 100%;
   margin: 0 0 12px;
   margin-top: -30px;
   padding: 0 260px 12px 0;
+
   text-transform: uppercase;
+
   color: #000;
   border-bottom: 1px solid #000;
 }
 
 .single-title {
   font-size: 23px;
+
   float: left;
+
   width: 100%;
   margin: 0 0 12px;
   margin-top: -14px;
   padding: 0 260px 12px 0;
+
   text-transform: uppercase;
+
   color: #000;
   border-bottom: 1px solid #000;
 }
 
 .article-left-sidebar {
   float: right;
+
   width: 780px;
   margin-bottom: 10px;
   padding-top: 30px;
   padding-bottom: 150px;
+
   @extend .clearfix;
   .page-title {
     font-size: 23px;
+
     margin: -30px 0 12px;
     padding: 0 0 12px;
+
     text-transform: uppercase;
+
     color: #040404;
     border-bottom: 1px solid #040404;
   }
@@ -415,17 +490,22 @@ article {
 
 .article-right-sidebar {
   float: left;
+
   width: 780px;
 }
 
 .article-without-sidebar {
   float: left;
+
   width: 780px;
   padding: 0 80px;
   .page-title-wide {
     font-size: 23px;
+
     margin: 0 0 30px;
+
     text-transform: uppercase;
+
     color: #040404;
   }
   form {
@@ -437,6 +517,7 @@ article {
     }
     input[type='submit'] {
       float: right;
+
       background-color: $blue;
     }
     p {
@@ -449,6 +530,7 @@ article {
   margin: 0 0 18px;
   span {
     display: inline-block;
+
     height: 20px;
     margin: 0 12px 0 0;
     padding: 6px 0;
@@ -457,7 +539,9 @@ article {
   .tags {
     a {
       display: inline-block;
+
       padding: 0 12px;
+
       color: #fff;
     }
   }
@@ -469,18 +553,22 @@ article {
   .tags {
     a {
       margin: 0 10px 0 0;
+
       background-color: $orange;
     }
   }
   .date {
     font-size: 15px;
+
     padding: 6px 0;
+
     color: #565859;
   }
 }
 
 .single-thumb {
   display: block;
+
   width: 100%;
   margin: 0 0 16px;
 }
@@ -492,9 +580,11 @@ article {
 .front-loop {
   display: inline-block;
   float: left;
+
   width: 380px;
   // height: 360px;
   margin: 0 10px 35px;
+
   background-color: #f7f7f7;
   &:nth-child(even) {
     margin-left: 0;
@@ -504,20 +594,26 @@ article {
   }
   a {
     position: relative;
+
     display: block;
+
     width: 100%;
     height: 100%;
     padding: 0;
+
     text-decoration: none;
+
     opacity: .9;
     img {
       display: block;
+
       width: 100%;
       height: 255px;
       margin: 0 0 12px;
     }
     &:hover {
       text-decoration: none;
+
       opacity: 1;
     }
   }
@@ -525,8 +621,11 @@ article {
     position: absolute;
     top: 16px;
     left: 0;
+
     display: inline-block;
+
     padding: 0 12px;
+
     color: #fff;
     &.catid-kultura {
       background-color: orange;
@@ -561,16 +660,21 @@ article {
   }
   .inner-title {
     font-size: 22px;
-    padding: 0 12px;
-    color: #000;
+
     margin-bottom: 30px;
+    padding: 0 12px;
+
+    color: #000;
   }
   .date {
     font-size: 12px;
+
     position: absolute;
     bottom: 12px;
     left: 12px;
+
     display: block;
+
     color: #565859;
   }
 }
@@ -582,11 +686,14 @@ article {
 
 .pagination {
   float: left;
+
   width: 100%;
+
   text-align: center;
   span,
   a {
     display: inline-block;
+
     margin: 0 5px;
   }
 }
@@ -599,11 +706,14 @@ aside {
     }
     h6 {
       font-size: 23px;
+
       margin-right: -12px;
       margin-bottom: 12px;
       margin-left: -12px;
       padding: 0 0 12px;
+
       text-transform: uppercase;
+
       color: #040404;
       border-bottom: 1px solid #040404;
     }
@@ -616,24 +726,51 @@ aside {
   .widget-last-news {
     li {
       position: relative;
+
       display: block;
+
       margin: 0 0 12px;
-      padding: 0 0 0 50px;
+      padding: 0 15px 0 50px;
+      &.post-first {
+        padding-top: 35px;
+        .time {
+          top: 35px;
+        }
+      }
       .time {
         font-size: 16px;
+
         position: absolute;
         top: 2px;
         left: 0;
+
         display: block;
+
         width: 35px;
+
         text-align: center;
-        color: #fff;
-        background-color: $blue;
+
+        color: #000;
+      }
+      .postdate {
+        font-size: 140%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        display: block;
+
+        text-align: center;
+
+        color: #000;
       }
       a {
         color: #000;
         &:hover {
           text-decoration: none;
+
           color: $blue;
         }
       }
@@ -643,15 +780,19 @@ aside {
     margin: 0 0 40px;
     h6 {
       font-size: 20px;
+
       margin: 0 0 16px;
       padding: 8px;
+
       color: #f8fbfd;
       border-bottom: 0;
     }
     li {
       font-size: 16px;
+
       margin: 0 0 12px;
       padding: 0 0 12px;
+
       border-bottom: 1px solid #000;
       a {
         color: #565859;
@@ -686,6 +827,7 @@ aside {
 footer {
   height: $footer;
   margin: $footer_margin auto 0;
+
   background-color: $blue;
   .inner {
     height: $footer;
@@ -694,11 +836,14 @@ footer {
       z-index: -1;
       top: -212px;
       right: 0;
+
       width: 327px;
       height: 206px;
+
       background-image: url(../img/logo-footer.png);
       background-repeat: no-repeat;
       background-position: right bottom;
+
       @extend .dblock;
     }
   }
@@ -706,16 +851,22 @@ footer {
     position: absolute;
     top: 35px;
     left: 0;
+
     @extend .clearfix;
     li {
       display: inline-block;
+
       padding: 0 10px;
+
       border-right: 1px solid #fff;
       a {
         font-size: 18px;
         line-height: .8;
+
         margin: 0;
+
         text-transform: capitalize;
+
         color: #fff;
       }
       &:last-child {
@@ -725,12 +876,33 @@ footer {
   }
   .copyright {
     font-size: 18px;
+
     position: absolute;
     top: 36px;
     right: 0;
+
     margin: 0;
+
     text-align: right;
+
     color: #fff;
+  }
+}
+
+#true_loadmore {
+  margin: 20px 0;
+  /* белый цвет текста */
+  padding: 5px;
+
+  cursor: pointer;
+  /* отступы от границ 5px */
+  text-align: center;
+
+  color: #fff;
+  border-radius: 4px;
+  background-color: #00b8f1;
+  &:hover {
+    background-color: darken(#00b8f1, 10%);
   }
 }
 
@@ -749,14 +921,15 @@ footer {
     width: 370px;
   }
   .header-search {
-    right: -810px;
-    top: 110px;
     position: relative;
+    top: 110px;
+    right: -810px;
   }
   header {
     &::before {
-      width: 100%;
       position: relative;
+
+      width: 100%;
     }
     .inner {
       width: 100%;
@@ -767,20 +940,22 @@ footer {
       .nav {
         position: relative;
         top: 100px;
+
         width: 100%;
       }
       .zibrov {
-        right: -600px;
         position: relative;
         top: 70px;
+        right: -600px;
       }
     }
   }
   footer {
     position: relative;
     left: 0;
-    margin: 0;
+
     width: 100%;
+    margin: 0;
     .inner {
       width: 100%;
       margin: 0 auto;
@@ -814,15 +989,16 @@ footer {
   }
   .article-left-sidebar {
     float: right;
+
     width: 750px;
   }
   .front-loop {
     width: 350px;
   }
   .header-search {
-    right: -810px;
-    top: 110px;
     position: relative;
+    top: 110px;
+    right: -810px;
   }
   header {
     &::before {
@@ -845,6 +1021,7 @@ footer {
   footer {
     position: relative;
     left: 0;
+
     width: 100%;
     .inner {
       &:after {
@@ -860,6 +1037,7 @@ footer {
 @media (max-width:1070px) {
   .article-left-sidebar {
     float: right;
+
     width: 715px;
   }
   .article-right-sidebar {
@@ -884,9 +1062,9 @@ footer {
     }
   }
   .header-search {
-    right: -753px;
-    top: 64px;
     position: relative;
+    top: 64px;
+    right: -753px;
   }
   header {
     &::before {
@@ -897,9 +1075,9 @@ footer {
         width: 100%;
       }
       .zibrov {
-        right: -500px;
         position: relative;
         top: 70px;
+        right: -500px;
       }
     }
   }
@@ -933,6 +1111,7 @@ footer {
 @media (max-width:1000px) {
   .article-left-sidebar {
     float: right;
+
     width: 600px;
   }
   .article-right-sidebar {
@@ -958,14 +1137,15 @@ footer {
       font-size: 16px;
     }
     .date {
-      display: block;
       bottom: -120px;
+
+      display: block;
     }
   }
   .header-search {
-    right: -690px;
-    top: 64px;
     position: relative;
+    top: 64px;
+    right: -690px;
   }
   header {
     &::before {
@@ -976,10 +1156,11 @@ footer {
         width: 100%;
       }
       .zibrov {
-        width: 365px;
-        right: -500px;
         position: relative;
         top: 70px;
+        right: -500px;
+
+        width: 365px;
         a {
           img {
             max-width: 100%;
@@ -1000,6 +1181,7 @@ footer {
 @media (max-width:930px) {
   .article-left-sidebar {
     float: right;
+
     width: 100%;
     padding-bottom: 50px;
     padding-left: 50px;
@@ -1021,14 +1203,15 @@ footer {
       font-size: 16px;
     }
     .date {
-      display: block;
       bottom: -40px;
+
+      display: block;
     }
   }
   .header-search {
-    right: -635px;
-    top: 38px;
     position: relative;
+    top: 38px;
+    right: -635px;
   }
   header {
     &::before {
@@ -1038,12 +1221,13 @@ footer {
       .nav {
         position: relative;
         top: 0;
+
         width: 100%;
       }
       .zibrov {
-        right: -500px;
         position: relative;
         top: -145px;
+        right: -500px;
         ;
       }
     }
@@ -1051,8 +1235,9 @@ footer {
   .sidebar-left {
     display: flex;
     flex-direction: row;
-    padding-left: 25px;
+
     width: 850px;
+    padding-left: 25px;
     .widget.widget_calendar {
       width: 400px;
     }
@@ -1084,8 +1269,8 @@ footer {
         top: 100px;
       }
       .header-search {
-        right: -633px;
         top: 62px;
+        right: -633px;
       }
       .zibrov {
         top: 70px;
@@ -1116,6 +1301,7 @@ footer {
   }
   .article-left-sidebar {
     float: left;
+
     width: 100%;
     padding-bottom: 50px;
   }
@@ -1123,6 +1309,7 @@ footer {
     .inner {
       display: flex;
       flex-direction: column;
+
       align-items: flex-start;
       .logo {
         position: relative;
@@ -1130,8 +1317,9 @@ footer {
       }
       .zibrov {
         position: relative;
-        right: -8%;
         top: 20px;
+        right: -8%;
+
         width: 400px;
         img {
           max-width: 100%;
@@ -1140,6 +1328,7 @@ footer {
       .nav {
         position: relative;
         top: 40px;
+
         width: 100%;
         .socialnav {
           float: right;
@@ -1171,8 +1360,9 @@ footer {
         font-size: 16px;
       }
       .date {
-        display: block;
         bottom: -60px;
+
+        display: block;
       }
     }
   }
@@ -1181,12 +1371,14 @@ footer {
       position: relative;
       top: 0;
       left: 0;
+
       width: 100%;
     }
   }
   .sidebar-left {
     display: flex;
     flex-direction: row;
+
     width: 100%;
     .widget.widget_calendar {
       width: 345px;
@@ -1212,6 +1404,7 @@ footer {
 @media (max-width:840px) {
   .article-left-sidebar {
     float: left;
+
     width: 100%;
     padding-bottom: 50px;
     padding-left: 30px;
@@ -1220,6 +1413,7 @@ footer {
     .inner {
       display: flex;
       flex-direction: column;
+
       align-items: flex-start;
       .logo {
         position: relative;
@@ -1227,8 +1421,9 @@ footer {
       }
       .zibrov {
         position: relative;
-        right: -8%;
         top: 20px;
+        right: -8%;
+
         width: 400px;
         img {
           max-width: 100%;
@@ -1237,6 +1432,7 @@ footer {
       .nav {
         position: relative;
         top: 40px;
+
         width: 100%;
         ul {
           li {
@@ -1265,8 +1461,9 @@ footer {
         font-size: 16px;
       }
       .date {
-        display: block;
         bottom: -50px;
+
+        display: block;
       }
     }
   }
@@ -1275,12 +1472,14 @@ footer {
       position: relative;
       top: 0;
       left: 0;
+
       width: 100%;
     }
   }
   .sidebar-left {
     display: flex;
     flex-direction: row;
+
     width: 100%;
     .widget.widget_calendar {
       width: 320px;
@@ -1306,6 +1505,7 @@ footer {
 @media (max-width:800px) {
   .article-left-sidebar {
     float: left;
+
     width: 100%;
     padding-bottom: 50px;
   }
@@ -1316,6 +1516,7 @@ footer {
     .inner {
       display: flex;
       flex-direction: column;
+
       align-items: flex-start;
       .logo {
         position: relative;
@@ -1323,8 +1524,9 @@ footer {
       }
       .zibrov {
         position: relative;
-        right: -8%;
         top: 20px;
+        right: -8%;
+
         width: 400px;
         img {
           max-width: 100%;
@@ -1333,6 +1535,7 @@ footer {
       .nav {
         position: relative;
         top: 40px;
+
         width: 100%;
         ul {
           li {
@@ -1370,12 +1573,14 @@ footer {
       position: relative;
       top: 0;
       left: 0;
+
       width: 100%;
     }
   }
   .sidebar-left {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     .widget.widget_calendar {
       width: 400px;
@@ -1408,6 +1613,7 @@ footer {
 @media (max-width:740px) {
   .article-left-sidebar {
     float: left;
+
     width: 100%;
     padding-bottom: 50px;
   }
@@ -1415,6 +1621,7 @@ footer {
     .inner {
       display: flex;
       flex-direction: column;
+
       align-items: flex-start;
       .logo {
         position: relative;
@@ -1422,8 +1629,9 @@ footer {
       }
       .zibrov {
         position: relative;
-        right: -8%;
         top: 20px;
+        right: -8%;
+
         width: 400px;
         img {
           max-width: 100%;
@@ -1432,6 +1640,7 @@ footer {
       .nav {
         position: relative;
         top: 40px;
+
         width: 100%;
         ul {
           li {
@@ -1469,12 +1678,14 @@ footer {
       position: relative;
       top: 0;
       left: 0;
+
       width: 100%;
     }
   }
   .sidebar-left {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     .widget.widget_calendar {
       width: 400px;
@@ -1512,27 +1723,34 @@ footer {
     .inner {
       .article-left-sidebar {
         position: relative;
+
         display: flex;
         flex-direction: column;
-        align-items: center;
+
         padding-left: 0;
+
+        align-items: center;
       }
     }
   }
   header {
     .inner {
-      width: 100%;
       display: flex;
       flex-direction: column;
+
+      width: 100%;
+
       align-items: flex-start;
       .logo {
         position: relative;
         top: 20px;
+
         margin: 0 auto;
       }
       .zibrov {
         position: relative;
         top: 20px;
+
         width: 400px;
         margin: 0 auto;
         img {
@@ -1542,6 +1760,7 @@ footer {
       .nav {
         position: relative;
         top: 40px;
+
         width: 100%;
         ul {
           li {
@@ -1558,6 +1777,7 @@ footer {
         position: relative;
         top: 3px;
         left: 390px;
+
         width: 100px;
       }
     }
@@ -1572,13 +1792,16 @@ footer {
       }
       .inner-title {
         font-size: 20px;
+
         text-align: center;
       }
       .date {
-        display: block;
-        bottom: 20px;
         font-size: 15px;
+
+        bottom: 20px;
         left: 36%;
+
+        display: block;
       }
     }
   }
@@ -1587,12 +1810,14 @@ footer {
       position: relative;
       top: 0;
       left: 0;
+
       width: 100%;
     }
   }
   .sidebar-left {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     .widget.widget_calendar {
       width: 400px;
@@ -1627,7 +1852,9 @@ footer {
     position: relative;
     top: 40px;
     left: 0;
+
     display: block;
+
     width: 100%;
     /* top: 3px; */
     /* left: 390px; */
@@ -1657,8 +1884,9 @@ footer {
       .inner {
         flex-direction: column;
         .single-title {
-          padding-left: 10px;
           font-size: 21px;
+
+          padding-left: 10px;
         }
       }
       footer {
@@ -1706,8 +1934,9 @@ footer {
       }
     }
     .copyright {
-      right: 5%;
       font-size: 15px;
+
+      right: 5%;
     }
   }
 }
@@ -1725,6 +1954,7 @@ footer {
         }
         .socialnav {
           display: block;
+
           width: 170px;
           li {
             width: 22px;
@@ -1735,7 +1965,6 @@ footer {
     }
   }
   .sidebar-left {
-    .widget.widget_calendar {}
     .widget-last-news {
       h6 {
         margin-right: 0;
@@ -1756,8 +1985,9 @@ footer {
       }
     }
     .copyright {
-      right: 5%;
       font-size: 15px;
+
+      right: 5%;
     }
   }
 }
@@ -1793,8 +2023,9 @@ footer {
       }
     }
     .copyright {
-      right: 5%;
       font-size: 15px;
+
+      right: 5%;
     }
   }
   body {
@@ -1802,8 +2033,9 @@ footer {
       .inner {
         flex-direction: column;
         .single-title {
-          padding-left: 10px;
           font-size: 18px;
+
+          padding-left: 10px;
         }
       }
       footer {
@@ -1844,13 +2076,13 @@ footer {
     }
   }
   .sidebar-left {
-    .widget.widget_calendar {}
     .widget-last-news {
       ul {
         li {
           span {
-            width: 30px;
             font-size: 13px;
+
+            width: 30px;
           }
         }
       }
@@ -1870,8 +2102,9 @@ footer {
       }
     }
     .copyright {
-      right: 2%;
       font-size: 13px;
+
+      right: 2%;
     }
   }
 }
@@ -1905,13 +2138,16 @@ footer {
       }
       .inner-title {
         font-size: 17px;
+
         text-align: center;
       }
       .date {
-        display: block;
-        bottom: -80px;
         font-size: 15px;
+
+        bottom: -80px;
         left: 36%;
+
+        display: block;
       }
     }
   }
@@ -1922,15 +2158,17 @@ footer {
     .widget-last-news {
       h6 {
         font-size: 18px;
+
         margin-right: 0;
       }
       ul {
         li {
-          padding: 0 0 0 35px;
           height: auto;
+          padding: 0 0 0 35px;
           span {
-            width: 30px;
             font-size: 13px;
+
+            width: 30px;
           }
         }
       }
@@ -1950,8 +2188,9 @@ footer {
       }
     }
     .copyright {
-      right: 2%;
       font-size: 13px;
+
+      right: 2%;
     }
   }
 }
@@ -1960,6 +2199,7 @@ footer {
   .article-left-sidebar {
     .cat-title.inner-title {
       font-size: 20px;
+
       padding: 0;
     }
   }
@@ -2000,6 +2240,7 @@ footer {
           li {
             a {
               font-size: 11px;
+
               padding: 0 10px;
             }
           }
@@ -2020,6 +2261,7 @@ footer {
       }
       .inner-title {
         font-size: 15px;
+
         text-align: center;
       }
       .date {
@@ -2034,16 +2276,19 @@ footer {
     .widget-last-news {
       h6 {
         font-size: 18px;
+
         margin-right: 0;
       }
       ul {
         li {
-          padding: 0 0 0 35px;
           height: auto;
+          padding: 0 0 0 35px;
           span {
-            width: 35px;
-            left: -4px;
             font-size: 13px;
+
+            left: -4px;
+
+            width: 35px;
           }
         }
       }
@@ -2116,6 +2361,7 @@ footer {
       }
       .inner-title {
         font-size: 15px;
+
         text-align: center;
       }
     }
@@ -2127,15 +2373,17 @@ footer {
     .widget-last-news {
       h6 {
         font-size: 18px;
+
         margin-right: 0;
       }
       ul {
         li {
-          padding: 0 0 0 35px;
           height: auto;
+          padding: 0 0 0 35px;
           span {
-            width: 30px;
             font-size: 13px;
+
+            width: 30px;
           }
         }
       }

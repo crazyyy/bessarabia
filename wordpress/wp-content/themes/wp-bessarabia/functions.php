@@ -31,7 +31,7 @@ function wpeStyles()  {
   wp_dequeue_style('fancybox');
   wp_dequeue_style('wp_dequeue_style');
 
-  wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
+  wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.3', 'all');
   wp_enqueue_style('wpeasy-style'); // Enqueue it!
 }
 function wpeHeaderScripts() {
@@ -549,5 +549,55 @@ function easy_breadcrumbs() {
 
   }
 } // end easy_breadcrumbs()
+
+
+function true_load_posts(){
+  $args = unserialize(stripslashes($_POST['query']));
+  $args['paged'] = $_POST['page'] + 1; // следующая страница
+  $args['post_status'] = 'publish';
+  $q = new WP_Query($args);
+  if( $q->have_posts() ):
+    while($q->have_posts()): $q->the_post();
+      ?>
+
+        <?php
+          $today = date('Y-m-d');
+          $postdate = get_the_date('Y-m-d');
+          $posttime = '<span class="time">'.get_the_date('H:i').'</span>';
+          if ( $today == $postdate ) {
+            $post_heading_date = '';
+            $postclass = 'post-today';
+          } else {
+            if ($tempdate === get_the_date('d F')) {
+              $post_heading_date = '';
+              $tempdate = get_the_date('d F');
+              $postclass = 'post-other';
+            } else {
+              $post_heading_date = '<span class="postdate">'.get_the_date('d F').'</span>';
+              $tempdate = get_the_date('d F');
+              $postclass = 'post-first';
+            }
+          }
+        ?>
+
+        <li id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
+          <?php echo $post_heading_date; ?>
+          <?php echo $posttime; ?>
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+
+
+
+      <?php
+    endwhile;
+  endif;
+  wp_reset_postdata();
+  die();
+}
+
+
+add_action('wp_ajax_loadmore', 'true_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+
 
 ?>

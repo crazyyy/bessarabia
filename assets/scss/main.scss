@@ -738,7 +738,7 @@ aside {
         }
       }
       .time {
-        font-size: 16px;
+        font-size: 15px;
 
         position: absolute;
         top: 2px;
@@ -750,7 +750,8 @@ aside {
 
         text-align: center;
 
-        color: #000;
+        color: #fff;
+        background-color: #00b8f1;
       }
       .postdate {
         font-size: 140%;
@@ -2079,11 +2080,11 @@ footer {
     .widget-last-news {
       ul {
         li {
-          span {
-            font-size: 13px;
+          // span {
+          //   font-size: 13px;
 
-            width: 30px;
-          }
+          //   width: 30px;
+          // }
         }
       }
     }
@@ -2164,12 +2165,12 @@ footer {
       ul {
         li {
           height: auto;
-          padding: 0 0 0 35px;
-          span {
-            font-size: 13px;
+          // padding: 0 0 0 35px;
+          // span {
+          //   font-size: 13px;
 
-            width: 30px;
-          }
+          //   width: 30px;
+          // }
         }
       }
     }
@@ -2282,13 +2283,13 @@ footer {
       ul {
         li {
           height: auto;
-          padding: 0 0 0 35px;
+          // padding: 0 0 0 35px;
           span {
-            font-size: 13px;
+            // font-size: 13px;
 
             left: -4px;
 
-            width: 35px;
+            // width: 35px;
           }
         }
       }
@@ -2379,11 +2380,11 @@ footer {
       ul {
         li {
           height: auto;
-          padding: 0 0 0 35px;
+          // padding: 0 0 0 35px;
           span {
-            font-size: 13px;
+            // font-size: 13px;
 
-            width: 30px;
+            // width: 30px;
           }
         }
       }
